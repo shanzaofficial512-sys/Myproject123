@@ -1,0 +1,180 @@
+/* ===== Notes Page - Hero ===== */
+.notes-hero {
+    background: #2e7d32;
+    color: #fff;
+    text-align: center;
+    padding: 60px 30px;
+}
+
+.notes-hero h1 {
+    font-size: 36px;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+.notes-hero .golden {
+    color: #c5a30a;
+}
+
+.notes-hero .hero-btn {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.notes-hero .hero-btn:hover {
+    background: #c5a30a;
+    border-color: #c5a30a;
+    transform: scale(1.08);
+}
+
+
+/* ===== Intro Section ===== */
+.intro-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.center-heading {
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.center-text {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+
+/* ===== PDF Section ===== */
+.pdf-section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.left-heading {
+    font-size: 26px;
+    color: #000;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+
+/* ===== Search Bar ===== */
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 2px solid #2e7d32;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    background: #fff;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px 14px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: #e8f5e9;       /* Light green background */
+    color: #555;
+}
+
+.search-bar button {
+    background: #2e7d32;
+    border: none;
+    color: #fff;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.search-bar button:hover {
+    background: #1b5e20;
+}
+
+
+/* ===== PDF Grid - 4 columns ===== */
+.pdf-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px 30px;
+    margin-bottom: 30px;
+}
+
+.pdf-item {
+    position: relative;
+    padding: 5px 5px 5px 28px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Green tick circle */
+.pdf-item::before {
+    content: "\2714";
+    color: #2e7d32;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #e8f5e9;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 18px;
+    font-size: 11px;
+}
+
+
+/* ===== Buttons ===== */
+.btn-center {
+    text-align: center;
+}
+
+.action-btn {
+    background: #c5a30a;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.action-btn:hover {
+    background: #a38807;
+    transform: scale(1.05);
+}
+
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 992px) {
+    .notes-hero h1 { font-size: 28px; }
+    .pdf-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .notes-hero h1 { font-size: 22px; }
+    .center-heading { font-size: 22px; }
+    .left-heading { font-size: 20px; }
+    .pdf-grid { grid-template-columns: 1fr; }
+}

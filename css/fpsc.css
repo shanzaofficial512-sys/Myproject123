@@ -1,0 +1,211 @@
+/* ===== FPSC Page - Hero ===== */
+.fpsc-hero {
+    background: #2e7d32;
+    color: #fff;
+    text-align: center;
+    padding: 60px 30px;
+}
+
+.fpsc-hero h1 {
+    font-size: 36px;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+.fpsc-hero .golden {
+    color: #c5a30a;
+}
+
+.fpsc-hero .hero-btn {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.fpsc-hero .hero-btn:hover {
+    background: #c5a30a;
+    border-color: #c5a30a;
+    transform: scale(1.08);
+}
+
+
+/* ===== Content Section ===== */
+.fpsc-section {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 20px;
+    color: #333;
+    line-height: 1.7;
+}
+
+.intro-text {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Black headings */
+.main-heading {
+    font-size: 26px;
+    color: #000;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Green sub-headings */
+.sub-heading {
+    font-size: 18px;
+    color: #2e7d32;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.fpsc-section p {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+
+/* Benefits list with green bullets */
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.benefits-list li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #444;
+}
+
+.benefits-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background: #2e7d32;
+    border-radius: 50%;
+}
+
+
+/* Golden action buttons (Apply Now / Get Answer) - matching site style */
+.action-btn {
+    background: #c5a30a;
+    color: #fff;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 15px 0 25px 0;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.action-btn:hover {
+    background: #a38807;
+    transform: scale(1.05);
+}
+
+
+/* ===== FAQ Accordion ===== */
+.faq-list {
+    margin: 20px 0;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-label {
+    color: #2e7d32;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #fff;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background: #f9f9f9;
+}
+
+.faq-num {
+    background: #2e7d32;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 24px;
+    font-weight: bold;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+.faq-text {
+    flex: 1;
+    font-size: 14px;
+    color: #333;
+}
+
+.faq-arrow {
+    color: #2e7d32;
+    font-size: 14px;
+    transition: transform 0.3s;
+}
+
+.faq-question.open .faq-arrow {
+    transform: rotate(180deg);
+}
+
+/* Hidden by default */
+.faq-answer {
+    display: none;
+    padding: 12px 14px;
+    background: #f9f9f9;
+    border-radius: 4px;
+    margin-top: 8px;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+.faq-answer p {
+    font-size: 13px;
+    color: #555;
+    margin: 0;
+}
+
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 768px) {
+    .fpsc-hero h1 { font-size: 24px; }
+    .main-heading { font-size: 20px; }
+    .sub-heading { font-size: 16px; }
+}

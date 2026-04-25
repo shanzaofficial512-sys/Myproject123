@@ -1,0 +1,151 @@
+/* ===== About Page - Hero Section ===== */
+.about-hero {
+    background: linear-gradient(135deg, #006400, #228B22);     
+    color: #fff;
+    text-align: center;
+    padding: 60px 30px;
+}
+
+.about-hero h1 {
+    font-size: 36px;
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+.about-hero .golden {
+    color: #c5a30a;
+}
+
+.hero-btn {
+   background: linear-gradient(to right, #d4b000, #2f7d22); 
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: #c5a30a;
+    border-color: #c5a30a;
+    transform: scale(1.08);          /* Hover pe thoda bara */
+}
+
+
+/* ===== About Us Content ===== */
+.about-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.about-section h1 {
+    font-size: 30px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.about-section h2 {
+    font-size: 22px;
+    color: #228B22;       /* Green sub-headings */
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.about-section p {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+
+/* ===== Study Materials Section ===== */
+.materials-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.materials-title {
+    font-size: 26px;
+    color: #000;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+/* 4 columns grid */
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* Single PDF item with green tick */
+.material-item {
+    position: relative;
+    padding: 6px 6px 6px 28px;
+    font-size: 14px;
+    color: #333;
+}
+
+.material-item::before {
+    content: "\2714";       /* ✔ green tick */
+    color: #228B22;
+    font-weight: bold;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #e8f5e9;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 18px;
+    font-size: 11px;
+}
+
+/* Center the button */
+.btn-center {
+    text-align: center;
+}
+
+.download-btn {
+   background: linear-gradient(to right, #d4b000, #2f7d22); 
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #a38807;
+    transform: scale(1.08);          /* Hover pe thoda bara */
+}
+
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 992px) {
+    .about-hero h1 { font-size: 28px; }
+    .materials-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .about-hero { padding: 40px 20px; }
+    .about-hero h1 { font-size: 22px; }
+    .about-section h1 { font-size: 24px; }
+    .about-section h2 { font-size: 18px; }
+    .materials-title { font-size: 20px; }
+    .materials-grid { grid-template-columns: 1fr; }
+}

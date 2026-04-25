@@ -1,0 +1,127 @@
+/* ===== English Page - Hero ===== */
+.english-hero {
+    background: #2e7d32;
+    color: #fff;
+    text-align: center;
+    padding: 60px 30px;
+}
+
+.english-hero h1 {
+    font-size: 36px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.english-hero .golden {
+    color: #c5a30a;
+}
+
+
+/* ===== Content Section ===== */
+.english-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.intro-text {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.section-heading {
+    font-size: 26px;
+    color: #000;
+    margin-bottom: 25px;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+
+/* ===== Quiz Form ===== */
+.quiz-form {
+    margin-top: 20px;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.q-text {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+
+/* Options row */
+.options {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Each option as bordered box */
+.option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 18px;
+    font-size: 13px;
+    color: #333;
+    cursor: pointer;
+    min-width: 130px;
+    background: #fff;
+    transition: border-color 0.3s;
+}
+
+.option:hover {
+    border-color: #2e7d32;
+}
+
+.option input[type="radio"] {
+    display: none;     /* Hide default radio */
+}
+
+.opt-letter {
+    color: #444;
+    font-weight: bold;
+}
+
+/* Golden letter for highlighted answer */
+.opt-letter.golden {
+    color: #c5a30a;
+}
+
+
+/* ===== Submit Button ===== */
+.submit-btn {
+    background: #c5a30a;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 25px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #a38807;
+    transform: scale(1.05);
+}
+
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 768px) {
+    .english-hero h1 { font-size: 24px; }
+    .section-heading { font-size: 20px; }
+    .options { flex-direction: column; }
+    .option { width: 100%; min-width: 0; }
+}
