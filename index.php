@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php include 'form2.php'; ?>
+<?php include 'form.php'; ?>
 <?php include 'includes/header.php'; ?>
 
 
