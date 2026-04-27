@@ -9,13 +9,17 @@ $page_description = "Islamic Studies MCQs from PPSC, FPSC, NTS, CSS past papers.
 <link rel="stylesheet" href="css/islammcqs.css">
 
 <!-- Hero Banner -->
-<section class="islamic-hero">
+<section class="islamic-hero" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <h1>Your Ultimate <span>Guide to Islamic<br>Studies</span> for Competitive Exams</h1>
 </section>
 
 <!-- Intro Paragraph -->
-<section class="islamic-intro">
-    <p>
+<section class="islamic-intro" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
+    <p >
         Islamic Studies holds a significant place in the preparation of PPSC, FPSC, NTS, CSS, and other government job exams
         in Pakistan. It is an essential component of the General Knowledge (GK) section, contributing valuable marks that can
         influence a candidate's overall ranking. Understanding Islamic teachings, history, and principles is not only beneficial
@@ -25,7 +29,9 @@ $page_description = "Islamic Studies MCQs from PPSC, FPSC, NTS, CSS past papers.
 </section>
 
 <!-- MCQs Section -->
-<section class="islamic-mcqs-section">
+<section class="islamic-mcqs-section" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <h2>Repeated MCQs from Islamic Studies Past Papers</h2>
 
     <?php

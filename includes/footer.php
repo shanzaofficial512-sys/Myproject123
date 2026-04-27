@@ -1,6 +1,12 @@
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
 <!-- Footer Section Start -->
 <footer class="site-footer">
-    <div class="footer-container">
+    <div class="footer-container"  data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
 
         <!-- Localization Column -->
         <div class="footer-column">
@@ -47,7 +53,7 @@
     </div>
 
     <!-- Social Media Icons -->
-    <div class="social-icons">
+    <div class="social-icons" >
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -55,9 +61,12 @@
     </div>
 
     <!-- Copyright Text -->
-    <div class="footer-bottom">
+    <div class="footer-bottom" >
         <p>Copyright &copy; 2025 SkillSphere. All rights reserved.</p>
     </div>
 
 </footer>
+<script>
+  AOS.init();
+</script>
 <!-- Footer Section End -->

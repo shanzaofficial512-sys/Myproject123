@@ -4,13 +4,17 @@
 
 
 <!-- ============ Hero ============ -->
-<section class="math-hero">
+<section class="math-hero" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <h1>Your <span class="golden">Ultimate Guide</span> to<br> Mathematics Exam Preparation</h1>
 </section>
 
 
 <!-- ============ Content ============ -->
-<section class="math-section">
+<section class="math-section" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
 
     <p class="intro-text">Mathematics is an essential component of preparation for competitive exams like PPSC, FPSC, and other government tests, as it tests candidates' analytical abilities, problem-solving skills, and logical reasoning. A strong grasp of mathematical concepts, such as algebra, geometry, statistics, and quantitative reasoning, is vital to perform well in these exams, where mathematical questions often appear in sections related to general knowledge, reasoning, and intelligence. Mastering math not only boosts confidence but also helps candidates manage time efficiently during the exam, ensuring they can answer more questions accurately within the given time frame. Therefore, consistent practice and understanding of core mathematical principles are crucial for success in PPSC, FPSC, and similar competitive exams.</p>
 

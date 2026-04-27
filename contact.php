@@ -1,3 +1,7 @@
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
 <?php
 $messageSent = false;
 
@@ -21,7 +25,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 <!-- ============ Contact Hero Start ============ -->
-<section class="contact-hero">
+<section class="contact-hero"  data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <h1>Reach Out <span class="golden">for Support</span><br> and Queries</h1>
     <button class="hero-btn">Contact Us Now</button>
 </section>
@@ -29,11 +35,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 <!-- ============ Contact Form Section Start ============ -->
-<section class="contact-section">
+<section class="contact-section"  data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <div class="contact-box">
 
         <!-- Left: Form -->
-        <div class="form-section">
+        <div class="form-section"  data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
             <h2>Drop Us a Message</h2>
 
             <?php if($messageSent): ?>
@@ -52,7 +62,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 
         <!-- Right: Map -->
-        <div class="map-section">
+        <div class="map-section"  data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
             <iframe
                 src="https://www.google.com/maps?q=Karachi&output=embed"
                 width="100%"
@@ -75,6 +87,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!-- JavaScript Files -->
 <script src="js/navbar.js"></script>
 <script src="js/footer.js"></script>
+<script>
+  AOS.init();
+</script>
 
 </body>
 </html>

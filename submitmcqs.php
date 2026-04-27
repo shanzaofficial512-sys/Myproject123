@@ -32,12 +32,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <link rel="stylesheet" href="css/submitmcqs.css">
 
 <!-- Hero Banner -->
-<section class="submit-hero">
+<section class="submit-hero" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <h1>Submit <span>Your MCQs</span> for Practice</h1>
 </section>
 
 <!-- Form Section -->
-<section class="submit-mcqs-section">
+<section class="submit-mcqs-section" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <h2>Submit Your MCQs</h2>
 
     <?php if ($error_message): ?>
@@ -46,7 +50,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     <?php endif; ?>
 
-    <div class="submit-form-box">
+    <div class="submit-form-box" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
         <form method="POST" action="">
 
             <div class="submit-form-grid">

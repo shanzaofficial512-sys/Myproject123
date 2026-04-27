@@ -4,21 +4,31 @@
 
 
 <!-- ============ Hero ============ -->
-<section class="english-hero">
+<section class="english-hero" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <h1>Unlock <span class="golden">Your English</span><br> Potential</h1>
 </section>
 
 
 <!-- ============ Content ============ -->
-<section class="english-section">
+<section class="english-section" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
 
-    <p class="intro-text">For PPSC, FPSC, and similar exams, English plays a pivotal role in both written and verbal evaluations. It is often one of the highest-weighted subjects, making it a scoring area that can significantly boost overall results. These exams assess candidates on their ability to grasp grammatical rules, enhance their vocabulary, and analyze passages efficiently. Websites that offer targeted resources, such as practice tests, grammar guides, and essay-writing tips, enable aspirants to refine their skills and gain the confidence needed to excel in competitive exams.</p>
+    <p class="intro-text" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">For PPSC, FPSC, and similar exams, English plays a pivotal role in both written and verbal evaluations. It is often one of the highest-weighted subjects, making it a scoring area that can significantly boost overall results. These exams assess candidates on their ability to grasp grammatical rules, enhance their vocabulary, and analyze passages efficiently. Websites that offer targeted resources, such as practice tests, grammar guides, and essay-writing tips, enable aspirants to refine their skills and gain the confidence needed to excel in competitive exams.</p>
 
-    <h2 class="section-heading">Test Your English Skills with MCQs and <br>Quizzes for Preparation</h2>
+    <h2 class="section-heading" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">Test Your English Skills with MCQs and <br>Quizzes for Preparation</h2>
 
 
     <!-- ============ MCQ Quiz ============ -->
-    <form class="quiz-form">
+    <form class="quiz-form" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
 
         <!-- Q1 -->
         <div class="question">

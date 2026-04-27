@@ -4,14 +4,18 @@
 
 
 <!-- ============ Hero ============ -->
-<section class="notes-hero">
+<section class="notes-hero" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <h1>Your Path <span class="golden">to Success Starts</span><br> with Our PDF Notes</h1>
     <button class="hero-btn">Get Your Notes</button>
 </section>
 
 
 <!-- ============ Intro Section ============ -->
-<section class="intro-section">
+<section class="intro-section" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <h2 class="center-heading">Comprehensive PDF Notes for <br>Every Exam</h2>
     <p class="center-text">PDF notes are digital study materials in Portable Document Format (PDF) that provide organized, comprehensive content designed to aid in exam preparation. These notes typically include summaries, explanations, diagrams, and practice questions covering various subjects or topics relevant to specific exams. PDF notes are easily downloadable and accessible, allowing students to study anytime, anywhere, making them a valuable resource for efficient learning and review. Whether for competitive exams like PPSC, FPSC, or other academic tests, these notes help streamline study efforts and improve understanding of key concepts.</p>
 
@@ -22,7 +26,9 @@
 
 
 <!-- ============ PDF Materials ============ -->
-<section class="pdf-section">
+<section class="pdf-section" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <h2 class="left-heading">Access Comprehensive PDF Study <br>Materials</h2>
 
     <!-- Search bar -->
@@ -32,7 +38,9 @@
     </div>
 
     <!-- 4-column PDF grid -->
-    <div class="pdf-grid">
+    <div class="pdf-grid" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
         <div class="pdf-item">English Nots PDF</div>
         <div class="pdf-item">Urdu Nots PDF</div>
         <div class="pdf-item">Islamiyat PDF</div>

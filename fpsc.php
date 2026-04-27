@@ -4,7 +4,9 @@
 
 
 <!-- ============ Hero Start ============ -->
-<section class="fpsc-hero">
+<section class="fpsc-hero" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <h1>Ace Your <span class="golden">FPSC Exam</span><br> with Past Papers</h1>
     <button class="hero-btn">Access Past Papers</button>
 </section>
@@ -12,14 +14,16 @@
 
 
 <!-- ============ Description ============ -->
-<section class="fpsc-section">
+<section class="fpsc-section" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <p class="intro-text">
         Unlock your potential with our extensive collection of FPSC past papers, tailored to help you excel in all major exams. From General Knowledge and English to Current Affairs and subject-specific tests, our repository is organized by year, subject, and exam type for effortless navigation. Practice with authentic past papers to familiarize yourself with exam patterns, sharpen your time management skills, and focus on high-yield topics. Whether you're preparing for CSS, general recruitment, or departmental exams, our platform provides detailed solutions, expert tips, and essential resources to boost your confidence. Start your journey to FPSC success today.
     </p>
 
 
     <!-- ============ Benefits ============ -->
-    <h2 class="main-heading">If Focused on Benefits of Past Papers</h2>
+    <h2 class="main-heading" >If Focused on Benefits of Past Papers</h2>
 
     <h3 class="sub-heading">Why Practice with FPSC Past Papers?</h3>
     <ul class="benefits-list">

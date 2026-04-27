@@ -4,14 +4,18 @@
 
 
 <!-- ============ Hero ============ -->
-<section class="ppsc-hero">
+<section class="ppsc-hero" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <h1>Master <span class="golden">the Exam with</span> PPSC<br> Past Papers</h1>
     <button class="hero-btn">Access Past Papers</button>
 </section>
 
 
 <!-- ============ Content ============ -->
-<section class="ppsc-section">
+<section class="ppsc-section" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
 
     <h2 class="main-heading">Discover Past Papers for All <br>PPSC Exams</h2>
     <p>These past papers are essential for preparation, as PPSC often designs 70% of its MCQ-based exams using previous papers. Our database includes past papers for a diverse range of roles previously offered by PPSC, providing an extensive variety of MCQ tests to enhance your readiness. Each paper consists of 100 MCQs, divided into manageable sets of 20 questions, allowing for efficient and focused learning. Additionally, detailed explanations accompany each question, helping aspirants understand concepts thoroughly. Candidates can attempt these MCQs to assess their knowledge, instantly view correct answers, and learn from the explanations provided. Below, you'll find PPSC past papers organized by category to support your preparation.</p>
@@ -22,7 +26,9 @@
 
 
     <!-- ============ FAQ ============ -->
-    <div class="faq-list">
+    <div class="faq-list" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
 
         <!-- FAQ 1 -->
         <div class="faq-item">

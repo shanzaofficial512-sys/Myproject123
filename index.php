@@ -1,10 +1,14 @@
 <?php session_start(); ?>
 <?php include 'form.php'; ?>
 <?php include 'includes/header.php'; ?>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
 <!-- ============ Hero Section Start ============ -->
-<div class="hero">
+<div class="hero"  data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <h1>Best Place to Prepare <br> for Competitive Exams</h1>
     <p>SkillSphere is a Digital Crack competitive exams for government exams with interactive quizzes, in-depth answers, and previous paper analysis for PPSC and FPSC tests live and MCQs</p>
     <a href="#quiz" class="btn">Prepare For Exams</a>
@@ -41,7 +45,9 @@ $questions = [
 <div class="container">
 
     <!-- Left side: MCQs -->
-    <div class="left">
+    <div class="left"  data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
         <h2>PPSC MCQs</h2>
         <div id="quiz">
             <?php foreach ($questions as $index => $q): ?>
@@ -62,7 +68,9 @@ $questions = [
     </div>
 
     <!-- Right side: Past Papers + Search -->
-    <div class="right">
+    <div class="right"  data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
         <div class="past-papers">
             <h3>PPSC Past Papers</h3>
             <p>Attempt quizzes featuring past papers for PPSC exams and deepen your understanding with topic-wise explanations.</p>
@@ -82,7 +90,9 @@ $questions = [
 <!-- ============ PPSC Mcqs Section End ============ -->
 
 <!-- ============ Dashboard Section Start ============ -->
-<section class="dashboard">
+<section class="dashboard"  data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
 
     <div class="dashboard-header">
         <h2>Dashboard</h2>
@@ -140,51 +150,115 @@ $questions = [
 
 
 <!-- ============ Quiz Section ============ -->
-<div id="quiz"></div>
+<div id="quiz" ></div>
 <?php include 'includes/quiz.php'; ?>
 
 
 <!-- ============ Our Blog Section Start ============ -->
-<section class="blog-section">
+
+<section class="blog-section"  data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <h2 class="blog-title">Our Blog</h2>
 
-    <div class="blog-cards">
+    <!-- WRAP OLD CONTENT -->
+    <div id="mainContent" class="fade-section">
+        <div class="blog-cards">
 
-        <!-- Blog Card 1 -->
-        <div class="blog-card">
-            <img src="images/blog1.jpg" alt="Blog 1">
-            <div class="blog-content">
-                <p class="blog-author">&#128100; By Admin</p>
-                <h3>Everything You Need To Know About PPSC</h3>
-                <p class="blog-date">&#128197; January , 22 , 2025</p>
-                <a href="#" class="learn-btn">Learn More</a>
+            <!-- Blog Card 1 -->
+            <div class="blog-card">
+                <img src="images/blog1.jpg" alt="Blog 1">
+                <div class="blog-content">
+                    <p class="blog-author">&#128100; By Admin</p>
+                    <h3>Everything You Need To Know About PPSC</h3>
+                    <p class="blog-date">&#128197; January , 22 , 2025</p>
+                    <a href="#" class="learn-btn">Learn More</a>
+                </div>
             </div>
+
+            <!-- Blog Card 2 -->
+            <div class="blog-card">
+                <img src="images/blog2.jpg" alt="Blog 2">
+                <div class="blog-content">
+                    <p class="blog-author">&#128100; By Admin</p>
+                    <h3>Boost Your Exam Performance with These Strategies</h3>
+                    <p class="blog-date">&#128197; January , 22 , 2025</p>
+                    <a href="#" class="learn-btn">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Blog Card 3 -->
+            <div class="blog-card">
+                <img src="images/blog3.jpg" alt="Blog 3">
+                <div class="blog-content">
+                    <p class="blog-author">&#128100; By Admin</p>
+                    <h3>Top Career Choices For A Bright Future</h3>
+                    <p class="blog-date">&#128197; January , 22 , 2025</p>
+                    <a href="#" class="learn-btn">Learn More</a>
+                </div>
+            </div>
+
         </div>
 
-        <!-- Blog Card 2 -->
-        <div class="blog-card">
-            <img src="images/blog2.jpg" alt="Blog 2">
-            <div class="blog-content">
-                <p class="blog-author">&#128100; By Admin</p>
-                <h3>Boost Your Exam Performance with These Strategies</h3>
-                <p class="blog-date">&#128197; January , 22 , 2025</p>
-                <a href="#" class="learn-btn">Learn More</a>
-            </div>
-        </div>
+        <br>
 
-        <!-- Blog Card 3 -->
-        <div class="blog-card">
-            <img src="images/blog3.jpg" alt="Blog 3">
-            <div class="blog-content">
-                <p class="blog-author">&#128100; By Admin</p>
-                <h3>Top Career Choices For A Bright Future</h3>
-                <p class="blog-date">&#128197; January , 22 , 2025</p>
-                <a href="#" class="learn-btn">Learn More</a>
-            </div>
-        </div>
-
+        <button class="learn-btn" onclick="loadMore()">Load More</button>
     </div>
+
+    <!-- NEW CONTENT (HIDDEN FIRST) -->
+    <div id="newContent" class="fade-section" style="display:none;">
+        <?php include 'new.php'; ?>
+        <br>
+        <button class="learn-btn" onclick="loadLess()">Load Less</button>
+    </div>
+
 </section>
+<script>
+function loadMore() {
+    const main = document.getElementById("mainContent");
+    const newC = document.getElementById("newContent");
+
+    // Fade out main
+    main.classList.add("fade-out");
+
+    setTimeout(() => {
+        main.style.display = "none";
+        main.classList.remove("fade-out");
+
+        // Show new content
+        newC.style.display = "block";
+        newC.classList.add("fade-out");
+
+        // trigger reflow
+        newC.offsetHeight;
+
+        newC.classList.remove("fade-out");
+        newC.classList.add("fade-in");
+    }, 400);
+}
+
+function loadLess() {
+    const main = document.getElementById("mainContent");
+    const newC = document.getElementById("newContent");
+
+    // Fade out new content
+    newC.classList.add("fade-out");
+
+    setTimeout(() => {
+        newC.style.display = "none";
+        newC.classList.remove("fade-out");
+
+        // Show main content
+        main.style.display = "block";
+        main.classList.add("fade-out");
+
+        main.offsetHeight;
+
+        main.classList.remove("fade-out");
+        main.classList.add("fade-in");
+    }, 400);
+}
+</script>
 <!-- ============ Our Blog Section End ============ -->
 
 
@@ -209,6 +283,9 @@ function checkAnswer(element, correctAnswer) {
         element.classList.add('wrong');       // Red background
     }
 }
+</script>
+<script>
+  AOS.init();
 </script>
 
 </body>

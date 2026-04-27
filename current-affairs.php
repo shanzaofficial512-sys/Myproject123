@@ -1,3 +1,6 @@
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 <?php
 $page_title       = "Daily Current Affairs for Competitive Exam Preparation | SkillSphere";
 $page_description = "Daily current affairs MCQs for PPSC, FPSC, NTS, CSS competitive exam preparation. Pakistan current affairs organized by month.";
@@ -66,12 +69,16 @@ $selected_month = $_GET['month'] ?? '';
 <link rel="stylesheet" href="css/current-affairs.css">
 
 <!-- Hero Banner -->
-<section class="ca-hero">
+<section class="ca-hero"   data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <h1>Daily <span>Current Affairs</span> for<br>Competitive Exam Preparation</h1>
 </section>
 
 <!-- Main Content -->
-<div class="ca-content">
+<div class="ca-content"   data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
 
     <!-- Why current affairs -->
     <h2>Why current affairs are essential for competitive exams ?</h2>
@@ -95,7 +102,9 @@ $selected_month = $_GET['month'] ?? '';
     </p>
 
     <!-- Search Row -->
-    <div class="ca-search-row">
+    <div class="ca-search-row"   data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
         <span class="ca-search-label">Find Updates on Specific Subjects</span>
         <div class="ca-search-input-wrap">
             <input type="text" placeholder="Search Here" id="caSearchInput">
@@ -105,8 +114,12 @@ $selected_month = $_GET['month'] ?? '';
     </div>
 
     <!-- MCQ Topics -->
-    <h2>Multiple Choice Questions on Pakistan Current Affairs</h2>
-    <ul class="ca-topics-list">
+    <h2 data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">Multiple Choice Questions on Pakistan Current Affairs</h2>
+    <ul class="ca-topics-list" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
         <?php foreach ($topics as $i => $topic): ?>
         <li>
             <span class="topic-num"><?php echo $i + 1; ?></span>
@@ -116,14 +129,18 @@ $selected_month = $_GET['month'] ?? '';
     </ul>
 
     <!-- Organized by Month Block -->
-    <div class="ca-month-block">
+    <div class="ca-month-block"   data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
         <h3>Current Affairs of Pakistan Organized by Month</h3>
         <p>Now it's time to share your latest Current Affairs MCQs with us.</p>
         <a href="submit-mcqs.php" class="btn-submit-here">Submit Here</a>
     </div>
 
     <!-- Month Dropdown -->
-    <div class="ca-month-select-row">
+    <div class="ca-month-select-row" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
         <label for="monthSelect">Organized by Month</label>
         <select id="monthSelect" class="ca-month-select" onchange="filterByMonth(this.value)">
             <option value="">Choose Month</option>
@@ -137,7 +154,9 @@ $selected_month = $_GET['month'] ?? '';
     </div>
 
     <!-- MCQ Cards Grid -->
-    <div class="ca-mcq-grid" id="mcqGrid">
+    <div class="ca-mcq-grid" id="mcqGrid"   data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
         <?php foreach ($mcqs as $mcq): ?>
         <div class="ca-mcq-card">
             <!-- Question Row -->
@@ -163,7 +182,7 @@ $selected_month = $_GET['month'] ?? '';
     </div>
 
     <!-- Finish and Submit -->
-    <div class="ca-finish-row">
+    <div class="ca-finish-row"  >
         <button class="btn-finish" type="button">Finish and Submit</button>
     </div>
 
@@ -177,6 +196,9 @@ function filterByMonth(month) {
         window.location.href = url.toString();
     }
 }
+</script>
+<script>
+  AOS.init();
 </script>
 
 <?php include 'includes/footer.php'; ?>

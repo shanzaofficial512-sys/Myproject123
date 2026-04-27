@@ -1,3 +1,9 @@
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
 <?php
 $questions = [
   [
@@ -38,10 +44,12 @@ $percentage       = ($correctAnswers / $totalScore) * 100;
 
 <!-- Quiz Section Start -->
 <section class="quiz-wrapper">
-  <div class="quiz-flex">
+  <div class="quiz-flex" >
 
     <!-- Quiz Section -->
-    <div class="quiz-container">
+    <div class="quiz-container"  data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
       <h2 class="quiz-title">Start Quiz Button</h2>
       <div class="subtitle">Good Luck</div>
 
@@ -74,7 +82,9 @@ $percentage       = ($correctAnswers / $totalScore) * 100;
     </div>
 
     <!-- Result Section -->
-    <div class="result-section">
+    <div class="result-section" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500" >
       <h2 class="quiz-title">Result</h2>
       <p>The result section of a quiz on an exams website provides detailed feedback on a user's performance. It typically includes the total score, correct and incorrect answers, and percentage achieved. This helps users identify strengths and areas for improvement, supporting effective preparation.</p>
 
@@ -99,5 +109,8 @@ $percentage       = ($correctAnswers / $totalScore) * 100;
   function reviewAnswers() { alert("Redirecting to detailed answer review..."); }
   function backToQuiz() { location.reload(); }
   function tryAgain() { window.location.href = "index.php"; }
+</script>
+<script>
+  AOS.init();
 </script>
 <!-- Quiz Section End -->

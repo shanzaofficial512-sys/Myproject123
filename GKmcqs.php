@@ -4,20 +4,28 @@
 
 
 <!-- ============ Hero ============ -->
-<section class="gk-hero">
+<section class="gk-hero" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <h1>Sharpen <span class="golden">Your General</span><br> Knowledge with Our MCQs</h1>
     <button class="hero-btn">Get Started with GK</button>
 </section>
 
 
 <!-- ============ Content ============ -->
-<section class="gk-section">
+<section class="gk-section" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
 
-    <p class="intro-text">General Knowledge (GK) MCQs are multiple-choice questions designed to test a candidate's knowledge across a broad range of topics, including history, geography, current affairs, science, and more. On exam websites, these MCQs serve as a vital tool for exam preparation, helping candidates familiarize themselves with the types of questions commonly asked in competitive exams like FPSC, PPSC, and others. By practicing GK MCQs, candidates can assess their knowledge, improve recall, and identify areas that need further study. The interactive format of MCQs makes them an effective and engaging way to revise key concepts, track progress, and build confidence for the actual exam.</p>
+    <p class="intro-text" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">General Knowledge (GK) MCQs are multiple-choice questions designed to test a candidate's knowledge across a broad range of topics, including history, geography, current affairs, science, and more. On exam websites, these MCQs serve as a vital tool for exam preparation, helping candidates familiarize themselves with the types of questions commonly asked in competitive exams like FPSC, PPSC, and others. By practicing GK MCQs, candidates can assess their knowledge, improve recall, and identify areas that need further study. The interactive format of MCQs makes them an effective and engaging way to revise key concepts, track progress, and build confidence for the actual exam.</p>
 
 
     <!-- Heading + Search -->
-    <div class="topbar">
+    <div class="topbar" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
         <h2 class="section-heading">Browse GK MCQs by Subject</h2>
         <div class="search-bar">
             <input type="text" placeholder="Search Now">
@@ -27,7 +35,9 @@
 
 
     <!-- ============ MCQ Grid ============ -->
-    <div class="mcq-grid">
+    <div class="mcq-grid" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
 
         <!-- MCQ 1 -->
         <div class="mcq-card">

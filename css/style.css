@@ -496,6 +496,24 @@ ul { list-style: none; }
     background: #1b5e20;
 }
 
+/* Smooth animation */
+/* .fade-section {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s ease;
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+} */
+
+
 
 /* ============================================
    RESPONSIVE - Mobile / Tablet

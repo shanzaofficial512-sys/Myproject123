@@ -1,3 +1,7 @@
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
 <?php include 'includes/header.php'; ?>
 
 <!-- Extra CSS sirf is page ke liye -->
@@ -5,7 +9,9 @@
 
 
 <!-- ============ Hero Section Start ============ -->
-<section class="about-hero">
+<section class="about-hero"  data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <h1>Your Roadmap <span class="golden">to</span><br>
         <span class="golden">Competitive</span> Exam Success
     </h1>
@@ -15,7 +21,9 @@
 
 
 <!-- ============ About Us Section Start ============ -->
-<section class="about-section">
+<section class="about-section"  data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <h1>About Us</h1>
 
     <h2>Who We Are...</h2>
@@ -40,7 +48,9 @@
 
 
 <!-- ============ Study Materials Section Start ============ -->
-<section class="materials-section">
+<section class="materials-section"  data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <h2 class="materials-title">Access, Download, and Succeed <br> with Our Notes</h2>
 
     <div class="materials-grid">
@@ -76,6 +86,9 @@
 <!-- JavaScript Files -->
 <script src="js/navbar.js"></script>
 <script src="js/footer.js"></script>
+<script>
+  AOS.init();
+</script>
 
 </body>
 </html>
