@@ -1,0 +1,206 @@
+/* ===== Submit MCQs Page Styles ===== */
+
+/* Hero Banner */
+.submit-hero {
+    background: linear-gradient(135deg, #006400, #228B22); 
+    padding: 60px 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.submit-hero h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #ffffff !important;
+    line-height: 1.3;
+    margin: 0 auto;
+    max-width: 700px;
+    background: transparent !important;
+    padding: 0;
+}
+
+.submit-hero h1 span {
+    color: #f5a623 !important;
+    background: transparent !important;
+}
+
+.submit-hero *,
+.submit-hero .container {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Form Section */
+.submit-mcqs-section {
+    padding: 50px 20px 60px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.submit-mcqs-section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 30px;
+}
+
+/* Green Form Box */
+.submit-form-box {
+    background: linear-gradient(135deg, #006400, #228B22);   
+    border-radius: 6px;
+    padding: 30px 28px 24px;
+    text-align: left;
+}
+
+/* Two-column layout */
+.submit-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 20px;
+}
+
+/* Form inputs */
+.submit-form-box input[type="text"],
+.submit-form-box input[type="email"],
+.submit-form-box input[type="password"],
+.submit-form-box input[type="tel"],
+.submit-form-box textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px dashed #aaaaaa;
+    border-radius: 4px;
+    background-color: #3a7a33;
+    color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.submit-form-box input::placeholder,
+.submit-form-box textarea::placeholder {
+    color: #cccccc;
+}
+
+.submit-form-box input:focus,
+.submit-form-box textarea:focus {
+    border-color: #f5a623;
+}
+
+/* Textarea */
+.submit-form-box textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+/* Password field wrapper */
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 42px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #cccccc;
+    font-size: 1rem;
+    padding: 0;
+    line-height: 1;
+}
+
+.password-toggle:hover {
+    color: #ffffff;
+}
+
+/* Note box (right side, spans below username/password/mobile) */
+.note-box {
+    margin-top: 4px;
+}
+
+.note-box .note-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.note-box .note-text {
+    font-size: 0.88rem;
+    color: #dddddd;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Register button */
+.submit-form-actions {
+    margin-top: 18px;
+}
+
+.btn-register {
+    background-color: #f5a623;
+    color: #ffffff;
+    border: none;
+    padding: 11px 28px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-register:hover {
+    background-color: #d48e10;
+}
+
+/* Thank you text */
+.submit-thankyou {
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .submit-hero h1 {
+        font-size: 2rem;
+    }
+
+    .submit-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .submit-mcqs-section h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .submit-hero {
+        padding: 40px 15px;
+    }
+
+    .submit-hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .submit-mcqs-section {
+        padding: 30px 15px 40px;
+    }
+
+    .submit-form-box {
+        padding: 22px 16px 18px;
+    }
+}

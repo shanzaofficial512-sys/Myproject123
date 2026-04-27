@@ -19,12 +19,11 @@
         <li class="dropdown">
             <a href="#">Pages &#9662;</a>
             <ul class="dropdown-menu">
-                <li><a href="#">Blog</a></li>
                  <li><a href="contact.php">Contact</a></li> 
                  <li><a href="pdfnotes.php">PDF Notes</a></li>
                  <li><a href="GKmcqs.php">GK Mcqs</a></li>
-                 <li><a href="submit-mcqs.php">Submit Mcqs</a></li>
-                 <li><a href="islamic-studies.php">Islamic Studies</a></li>
+                 <li><a href="submitmcqs.php">Submit Mcqs</a></li>
+                 <li><a href="islammcqs.php">Islamic Studies</a></li>
                  <li><a href="english.php">English</a></li>
                  <li><a href="math.php">Mathematics</a></li>
             </ul>
@@ -36,7 +35,6 @@
             <ul class="dropdown-menu">
                 <li><a href="ppsc.php">PPSC Past Papers</a></li>
                 <li><a href="fpsc.php">FPSC Mcqs</a></li>
-                <li><a href="#">NTS Mcqs</a></li>
             </ul>
         </li>
 
@@ -44,9 +42,9 @@
         <li class="dropdown">
             <a href="#">Current Affairs &#9662;</a>
             <ul class="dropdown-menu">
-                <li><a href="#">National</a></li>
-                <li><a href="#">International</a></li>
-                <li><a href="#">Sports</a></li>
+                <li><a href="current-affairs.php">National</a></li>
+                <li><a href="current-affairs.php">International</a></li>
+                <li><a href="current-affairs.php">Sports</a></li>
             </ul>
         </li>
 

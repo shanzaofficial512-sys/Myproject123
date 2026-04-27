@@ -1,6 +1,6 @@
 /* ===== FPSC Page - Hero ===== */
 .fpsc-hero {
-    background: #2e7d32;
+    background: linear-gradient(135deg, #006400, #228B22); 
     color: #fff;
     text-align: center;
     padding: 60px 30px;
@@ -17,7 +17,7 @@
 }
 
 .fpsc-hero .hero-btn {
-    background: transparent;
+    background: linear-gradient(to right, #d4b000, #2f7d22); 
     color: #fff;
     border: 2px solid #fff;
     padding: 10px 25px;
@@ -104,7 +104,7 @@
 
 /* Golden action buttons (Apply Now / Get Answer) - matching site style */
 .action-btn {
-    background: #c5a30a;
+    background: linear-gradient(to right, #d4b000, #2f7d22); 
     color: #fff;
     border: none;
     padding: 10px 28px;

@@ -1,6 +1,6 @@
 /* ===== English Page - Hero ===== */
 .english-hero {
-    background: #2e7d32;
+  background: linear-gradient(135deg, #006400, #228B22);   
     color: #fff;
     text-align: center;
     padding: 60px 30px;
