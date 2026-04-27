@@ -1,6 +1,6 @@
 /* ===== Contact Page - Hero Section ===== */
 .contact-hero {
-    background: #2e7d32;
+     background: linear-gradient(135deg, #006400, #228B22);
     color: #fff;
     text-align: center;
     padding: 60px 30px;
@@ -17,7 +17,7 @@
 }
 
 .contact-hero .hero-btn {
-    background: transparent;
+    background: linear-gradient(to right, #d4b000, #2f7d22); 
     color: #fff;
     border: 2px solid #fff;
     padding: 10px 25px;
@@ -46,7 +46,7 @@
     max-width: 1100px;
     margin: 0 auto;
     display: flex;
-    background: #2e7d32;
+     background: linear-gradient(135deg, #006400, #228B22);
     border-radius: 10px;
     padding: 30px;
     gap: 30px;
@@ -89,7 +89,7 @@
 
 /* Send button */
 .send-btn {
-    background: #c5a30a;        /* Golden */
+   background: linear-gradient(to right, #d4b000, #2f7d22);        /* Golden */
     border: none;
     padding: 12px 28px;
     border-radius: 5px;

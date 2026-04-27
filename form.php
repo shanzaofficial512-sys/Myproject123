@@ -1,74 +1,18 @@
-
-<?php
-$uploadDir = "uploads/";
-
-if (!is_dir($uploadDir)) {
-    mkdir($uploadDir, 0755, true);
-}
-
-$name = $email = $address = $password = $imagePath = "";
-$error = "";
-$msg = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    try {
-        $name = htmlspecialchars($_POST["name"]);
-        $email = htmlspecialchars($_POST["email"]);
-        $address = htmlspecialchars($_POST["address"]);
-        $password = htmlspecialchars($_POST["password"]);
-
-        // Image Upload
-        if (isset($_FILES["profile_image"]) && $_FILES["profile_image"]["error"] == 0) {
-            $fileTmpPath = $_FILES["profile_image"]["tmp_name"];
-            $fileName = basename($_FILES["profile_image"]["name"]);
-            $fileExtension = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
-
-            $allowedExtensions = ["jpg", "jpeg", "png", "gif"];
-
-            if (!in_array($fileExtension, $allowedExtensions)) {
-                throw new Exception("Invalid file type.");
-            }
-
-            $newFileName = uniqid("IMG_", true) . "." . $fileExtension;
-            $destPath = $uploadDir . $newFileName;
-
-            if (!move_uploaded_file($fileTmpPath, $destPath)) {
-                throw new Exception("Error uploading file.");
-            }
-
-            $imagePath = $destPath;
-        } else {
-            throw new Exception("Image is required.");
-        }
-
-        // Email send
-        $to = $email;
-        $subject = "Welcome!";
-        $message = "Thank you $name for submitting the form.";
-        $headers = "From: your@email.com";
-
-        // if (!mail($to, $subject, $message, $headers)) {
-        //     throw new Exception("Email failed (XAMPP issue).");
-        // }
-        if (!@mail($to, $subject, $message, $headers)) {
-    $error = "Email failed (XAMPP issue).";
-}
-
-        $msg = "Form submitted & email sent!";
-
-    } catch (Exception $e) {
-        $error = $e->getMessage();
-    }
-}
-?>
 <!DOCTYPE html>
 <html>
 <head>
 <title>SkillShare</title>
 
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+    emailjs.init("ZsjIJ4yvIyQ5F2KfO"); // Public Key
+})();
+</script>
+
 <style>
-    /* ✅ Scoped modal styles only */
 .modal {
     display: flex;                
     justify-content: center;
@@ -100,7 +44,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     font-size: 20px;
 }
 
-/* Scoped inputs/textareas inside modal */
 .modal-content input,
 .modal-content textarea {
     width: 100%;
@@ -108,7 +51,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     margin: 8px 0;
 }
 
-/* Scoped button inside modal */
 .modal-content button {
     background: linear-gradient(to right, #d4b000, #2f7d22);
     color: #fff;
@@ -117,7 +59,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     width: 100%;
 }
 
-/* Card inside modal */
 .modal-content .card {
     margin-top: 15px;
     text-align: center;
@@ -128,9 +69,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     border-radius: 50%;
 }
 
-/* Messages inside modal */
-.modal-content .error { color: red; }
-.modal-content .success { color: green; }
+.error { color: red; }
+.success { color: green; }
 
 </style>
 </head>
@@ -144,29 +84,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <h2>Student Form</h2>
 
-        <?php if ($error) echo "<p class='error'>$error</p>"; ?>
-        <?php if ($msg) echo "<p class='success'>$msg</p>"; ?>
+        <p id="statusMsg"></p>
 
-        <form method="POST" enctype="multipart/form-data">
+        <form id="studentForm">
             <input type="text" name="name" placeholder="Full Name" required>
             <input type="email" name="email" placeholder="Email Address" required>
             <textarea name="address" placeholder="Permanent Address" required></textarea>
             <input type="password" name="password" placeholder="Password" required>
-            <input type="file" name="profile_image" required>
+            <input type="file" name="profile_image" accept="image/*" required>
             <button type="submit">Submit</button>
         </form>
 
-        <!-- ✅ Card always show after submit -->
-        <?php if ($_SERVER["REQUEST_METHOD"] == "POST"): ?>
-        <div class="card">
-            <?php if ($imagePath): ?>
-                <img src="<?php echo $imagePath; ?>">
-            <?php endif; ?>
-            <h3><?php echo $name; ?></h3>
-            <p><?php echo $email; ?></p>
-            <p><?php echo $address; ?></p>
+        <!-- Preview Card -->
+        <div class="card" id="previewCard" style="display:none;">
+            <img id="previewImg">
+            <h3 id="previewName"></h3>
+            <p id="previewEmail"></p>
+            <p id="previewAddress"></p>
         </div>
-        <?php endif; ?>
 
     </div>
 </div>
@@ -175,6 +110,52 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 function closePopup(){
     document.querySelector(".modal").style.display="none";
 }
+
+// Handle Form Submit
+document.getElementById("studentForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const form = this;
+    const statusMsg = document.getElementById("statusMsg");
+
+    const name = form.name.value;
+    const email = form.email.value;
+    const address = form.address.value;
+    const password = form.password.value;
+    const file = form.profile_image.files[0];
+
+    // Preview Image
+    const reader = new FileReader();
+    reader.onload = function(e){
+        document.getElementById("previewImg").src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+
+    // Show Preview Card
+    document.getElementById("previewName").innerText = name;
+    document.getElementById("previewEmail").innerText = email;
+    document.getElementById("previewAddress").innerText = address;
+    document.getElementById("previewCard").style.display = "block";
+
+    // EmailJS Params
+    const templateParams = {
+        name: name,
+        email: email,
+        address: address,
+        password: password   // ⚠️ Not recommended in real apps
+    };
+
+    // Send Email
+    emailjs.send("service_0a2ercb", "template_jyqvtnb", templateParams)
+    .then(function(response) {
+        statusMsg.innerHTML = "<span class='success'>✅ Email sent successfully!</span>";
+        form.reset();
+    }, function(error) {
+        statusMsg.innerHTML = "<span class='error'>❌ Failed to send email</span>";
+        console.log(error);
+    });
+
+});
 </script>
 
 </body>

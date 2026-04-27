@@ -1,6 +1,6 @@
 /* ===== Math Page - Hero ===== */
 .math-hero {
-    background: #2e7d32;
+    background: linear-gradient(135deg, #006400, #228B22); 
     color: #fff;
     text-align: center;
     padding: 60px 30px;
@@ -90,7 +90,8 @@
 
 /* ===== Attempt Quiz Button ===== */
 .action-btn {
-    background: #c5a30a;
+   
+    background: linear-gradient(to right, #d4b000, #2f7d22); 
     color: #fff;
     border: none;
     padding: 10px 26px;
