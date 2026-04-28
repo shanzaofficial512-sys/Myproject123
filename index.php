@@ -202,7 +202,9 @@ $questions = [
 
         <br>
 
-        <button class="learn-btn" onclick="loadMore()">Load More</button>
+        <button class="learn-btn" onclick="loadMore()" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">Load More</button>
     </div>
 
     <!-- NEW CONTENT (HIDDEN FIRST) -->

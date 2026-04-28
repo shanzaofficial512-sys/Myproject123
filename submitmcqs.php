@@ -133,7 +133,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     <!-- Register Button -->
                     <div class="submit-form-actions">
-                        <button type="submit" class="btn-register">Register Now</button>
+                        <button type="submit" class="btn-register" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">Register Now</button>
                     </div>
                 </div>
 

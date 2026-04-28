@@ -193,7 +193,9 @@
 
 
     <div class="btn-center">
-        <button class="action-btn">Take The Quiz</button>
+        <button class="action-btn" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">Take The Quiz</button>
     </div>
 
 </section>

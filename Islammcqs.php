@@ -11,7 +11,7 @@ $page_description = "Islamic Studies MCQs from PPSC, FPSC, NTS, CSS past papers.
 <!-- Hero Banner -->
 <section class="islamic-hero" data-aos="fade-up"
      data-aos-easing="linear"
-     data-aos-duration="1500">
+     data-aos-duration="1499">
     <h1>Your Ultimate <span>Guide to Islamic<br>Studies</span> for Competitive Exams</h1>
 </section>
 

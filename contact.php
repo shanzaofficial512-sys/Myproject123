@@ -57,7 +57,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="text"  name="subject" placeholder="Subject"      class="contact-input">
                 <textarea name="message" placeholder="Your Message" class="contact-input contact-textarea" required></textarea>
 
-                <button type="submit" class="send-btn">Send Message</button>
+                <button type="submit" class="send-btn" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">Send Message</button>
             </form>
         </div>
 

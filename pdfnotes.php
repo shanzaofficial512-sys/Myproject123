@@ -83,7 +83,9 @@
     </div>
 
     <div class="btn-center">
-        <button class="action-btn">Download Study Materials</button>
+        <button class="action-btn" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">Download Study Materials</button>
     </div>
 </section>
 

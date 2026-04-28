@@ -63,7 +63,9 @@
 
     <p class="bold-line">Key MCQs for Competitive Exams (PPSC, SPSC, FPSC, BPSC, NTS, IB, FIA) — Most Repeated Questions Available for Free!</p>
 
-    <button class="action-btn">Attempt Quiz</button>
+    <button class="action-btn" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">Attempt Quiz</button>
 
 </section>
 

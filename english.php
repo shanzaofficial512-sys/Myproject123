@@ -90,7 +90,9 @@
             </div>
         </div>
 
-        <button type="submit" class="submit-btn">Finish and Submit</button>
+        <button type="submit" class="submit-btn" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">Finish and Submit</button>
 
     </form>
 

@@ -73,7 +73,9 @@
     </div>
 
     <div class="btn-center">
-        <button class="download-btn">Download Study Materials</button>
+        <button class="download-btn" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">Download Study Materials</button>
     </div>
 </section>
 <!-- ============ Study Materials Section End ============ -->

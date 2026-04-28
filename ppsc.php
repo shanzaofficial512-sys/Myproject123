@@ -85,7 +85,9 @@
 
     </div>
 
-    <button class="action-btn">Get Answers</button>
+    <button class="action-btn" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">Get Answers</button>
 
 </section>
 

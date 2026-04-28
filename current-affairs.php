@@ -183,7 +183,9 @@ $selected_month = $_GET['month'] ?? '';
 
     <!-- Finish and Submit -->
     <div class="ca-finish-row"  >
-        <button class="btn-finish" type="button">Finish and Submit</button>
+        <button class="btn-finish" type="button" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">Finish and Submit</button>
     </div>
 
 </div>

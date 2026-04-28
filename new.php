@@ -83,10 +83,14 @@
 }
 
 </style> -->
-<section class="blog-section">
+<section class="blog-section" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <!-- <h2 class="blog-title">Our Blog</h2> -->
 
-    <div class="blog-cards">
+    <div class="blog-cards" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
 
         <!-- Blog Card 1 -->
         <div class="blog-card">
