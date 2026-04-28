@@ -29,15 +29,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      data-aos-easing="linear"
      data-aos-duration="1500">
     <h1>Reach Out <span class="golden">for Support</span><br> and Queries</h1>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
     <button class="hero-btn">Contact Us Now</button>
 </section>
 <!-- ============ Contact Hero End ============ -->
 
 
 <!-- ============ Contact Form Section Start ============ -->
-<section class="contact-section"  data-aos="fade-up"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
+<section class="contact-section">
     <div class="contact-box">
 
         <!-- Left: Form -->
@@ -89,9 +91,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!-- JavaScript Files -->
 <script src="js/navbar.js"></script>
 <script src="js/footer.js"></script>
-<script>
-  AOS.init();
-</script>
 
 </body>
 </html>

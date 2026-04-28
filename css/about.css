@@ -1,23 +1,54 @@
 /* ===== About Page - Hero Section ===== */
 .about-hero {
-    background: linear-gradient(135deg, #006400, #228B22);     
+    background: linear-gradient(135deg, #006400, #228B22);
     color: #fff;
     text-align: center;
     padding: 60px 30px;
+    animation: fadeInHero 1.2s ease-in-out;
+}
+
+@keyframes fadeInHero {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .about-hero h1 {
     font-size: 36px;
     line-height: 1.4;
     margin-bottom: 25px;
+    animation: slideInText 1s ease-in-out 0.3s backwards;
+}
+
+
+@keyframes slideInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .about-hero .golden {
     color: #c5a30a;
+    animation: pulseGold 2.5s infinite alternate ease-in-out;
+}
+
+@keyframes pulseGold {
+    from { color: #c5a30a; }
+    to { color: #ffdb4d; }
 }
 
 .hero-btn {
-   background: linear-gradient(to right, #d4b000, #2f7d22); 
+    background: linear-gradient(to right, #d4b000, #2f7d22);
     color: #fff;
     border: 2px solid #fff;
     padding: 10px 25px;
@@ -25,41 +56,58 @@
     cursor: pointer;
     font-size: 14px;
     font-weight: bold;
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInBtn 1.5s ease 0.6s backwards;
+}
+
+@keyframes fadeInBtn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .hero-btn:hover {
     background: #c5a30a;
     border-color: #c5a30a;
-    transform: scale(1.08);          /* Hover pe thoda bara */
+    transform: scale(1.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 
 /* ===== About Us Content ===== */
 .about-section {
+    text-align: center;
     max-width: 900px;
     margin: 40px auto;
-    padding: 20px;
+    padding: 25px;
+    animation: fadeInSection 1s ease-in-out;
+    line-height: 1.4;
+    animation: slideInText 1s ease-in-out 0.3s backwards;
 }
-
-.about-section h1 {
-    font-size: 30px;
-    color: #000;
-    margin-bottom: 20px;
-}
-
 .about-section h2 {
-    font-size: 22px;
-    color: #228B22;       /* Green sub-headings */
-    margin-top: 25px;
-    margin-bottom: 10px;
-}
+    text-align: left;
+            color: #2e7d32;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        .about-section p {
+    text-align: left;
+        }
 
-.about-section p {
-    font-size: 15px;
-    color: #333;
-    line-height: 1.7;
-    margin-bottom: 15px;
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
@@ -67,58 +115,60 @@
 .materials-section {
     max-width: 900px;
     margin: 40px auto;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
+    animation: fadeInSection 1s ease-in-out 0.3s backwards;
 }
 
-.materials-title {
-    font-size: 26px;
-    color: #000;
-    margin-bottom: 30px;
-    line-height: 1.4;
-}
-
-/* 4 columns grid */
 .materials-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
+     margin-top: 30px;
     margin-bottom: 30px;
     text-align: left;
-}
+  }
 
-/* Single PDF item with green tick */
+.material-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 .material-item {
     position: relative;
     padding: 6px 6px 6px 28px;
     font-size: 14px;
     color: #333;
+    opacity: 1;
+    transform: translateY(15px);
+    animation: popIn 0.6s ease forwards;
+    /* animation: scaleUp 0.6s ease; */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+ .material-item::before {
+            content: "✔";
+            color: #2e7d32;
+            font-weight: bold;
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
 
-.material-item::before {
-    content: "\2714";       /* ✔ green tick */
-    color: #228B22;
-    font-weight: bold;
-    position: absolute;
-    left: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #e8f5e9;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 18px;
-    font-size: 11px;
+.material-item:nth-child(1) { animation-delay: 0.2s; }
+.material-item:nth-child(2) { animation-delay: 0.3s; }
+.material-item:nth-child(3) { animation-delay: 0.4s; }
+.material-item:nth-child(4) { animation-delay: 0.5s; }
+
+@keyframes popIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Center the button */
-.btn-center {
-    text-align: center;
-}
-
 .download-btn {
-   background: linear-gradient(to right, #d4b000, #2f7d22); 
+    background: linear-gradient(to right, #d4b000, #2f7d22);
     color: #fff;
     font-size: 15px;
     font-weight: bold;
@@ -126,12 +176,15 @@
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInBtn 1.2s ease 0.5s backwards;
 }
 
 .download-btn:hover {
     background: #a38807;
-    transform: scale(1.08);          /* Hover pe thoda bara */
+    
+    transform: scale(1.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 

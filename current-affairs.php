@@ -76,13 +76,13 @@ $selected_month = $_GET['month'] ?? '';
 </section>
 
 <!-- Main Content -->
-<div class="ca-content"   data-aos="fade-up"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
+<div class="ca-content">
 
     <!-- Why current affairs -->
-    <h2>Why current affairs are essential for competitive exams ?</h2>
-    <p>
+    <h2 data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">Why current affairs are essential for competitive exams ?</h2>
+    <p data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
         Current affairs are essential for competitive exams because they assess a candidate's awareness of national and
         international events, which is crucial for roles requiring decision-making and analytical skills. They help aspirants
         stay informed about politics, economy, science, and technology, which are frequently included in exams. Additionally,
@@ -92,8 +92,9 @@ $selected_month = $_GET['month'] ?? '';
     </p>
 
     <!-- Current Affairs of Pakistan -->
-    <h2>Current Affairs Of Pakistan</h2>
-    <p>
+    <h2 data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">Current Affairs Of Pakistan</h2>
+    <p data-aos="fade-up" data-aos-anchor-placement="center-bottom">
         Current affairs of Pakistan encompass the latest developments in politics, economy, society, and international relations,
         reflecting the country's dynamic environment. Key events include government policies, political shifts, economic challenges,
         and major social issues. Regular updates highlight national and international news, political decisions, economic reforms,
@@ -114,14 +115,11 @@ $selected_month = $_GET['month'] ?? '';
     </div>
 
     <!-- MCQ Topics -->
-    <h2 data-aos="fade-up"
-     data-aos-easing="linear"
-     data-aos-duration="1500">Multiple Choice Questions on Pakistan Current Affairs</h2>
-    <ul class="ca-topics-list" data-aos="fade-up"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
+    <h2>Multiple Choice Questions on Pakistan Current Affairs</h2>
+    <ul class="ca-topics-list">
         <?php foreach ($topics as $i => $topic): ?>
-        <li>
+        <li data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
             <span class="topic-num"><?php echo $i + 1; ?></span>
             <?php echo htmlspecialchars($topic); ?>
         </li>
@@ -129,18 +127,14 @@ $selected_month = $_GET['month'] ?? '';
     </ul>
 
     <!-- Organized by Month Block -->
-    <div class="ca-month-block"   data-aos="fade-up"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
+    <div class="ca-month-block">
         <h3>Current Affairs of Pakistan Organized by Month</h3>
         <p>Now it's time to share your latest Current Affairs MCQs with us.</p>
         <a href="submit-mcqs.php" class="btn-submit-here">Submit Here</a>
     </div>
 
     <!-- Month Dropdown -->
-    <div class="ca-month-select-row" data-aos="fade-up"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
+    <div class="ca-month-select-row">
         <label for="monthSelect">Organized by Month</label>
         <select id="monthSelect" class="ca-month-select" onchange="filterByMonth(this.value)">
             <option value="">Choose Month</option>
@@ -158,7 +152,9 @@ $selected_month = $_GET['month'] ?? '';
      data-aos-easing="linear"
      data-aos-duration="1500">
         <?php foreach ($mcqs as $mcq): ?>
-        <div class="ca-mcq-card">
+        <div class="ca-mcq-card" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
             <!-- Question Row -->
             <div class="ca-mcq-question-row">
                 <span class="mcq-icon">&#10003;</span>
@@ -166,7 +162,7 @@ $selected_month = $_GET['month'] ?? '';
                 <span class="ca-mcq-arrow">&#8679;</span>
             </div>
             <!-- Options -->
-            <div class="ca-mcq-options-row">
+            <div class="ca-mcq-options-row" >
                 <?php foreach ($mcq['options'] as $label => $text): ?>
                 <span class="ca-mcq-option <?php echo ($label === $mcq['correct']) ? 'correct' : ''; ?>">
                     <?php echo htmlspecialchars($label); ?>) <?php echo htmlspecialchars($text); ?>
@@ -198,6 +194,7 @@ function filterByMonth(month) {
         window.location.href = url.toString();
     }
 }
+  AOS.init();
 </script>
 <script>
   AOS.init();
